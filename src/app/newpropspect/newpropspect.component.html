@@ -1,0 +1,32 @@
+<div>
+    <div>
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" [(ngModel)]="prospect.nome"/>
+    </div>
+    <div>
+        <label for="documento">Número do documento: </label>
+        <input type="text" id="documento" [(ngModel)]="prospect.numeroDocumento"/>
+    </div>
+    <div>
+        <label for="dataNascimento">Data nascimento: </label>
+        <input type="date" id="dataNascimento" [ngModel]="prospect.dataNascimento | date:'yyyy-MM-dd'" (ngModelChange)="prospect.dataNascimento=$event"/>
+    </div>
+    <div>
+        <label for="cidade">Cidade Residência: </label>
+        <input type="text" id="cidade" [(ngModel)]="prospect.cidadeResidencia"/>
+    </div>
+    <div>
+        <label for="excluido">Excluído: </label>
+        <input disabled="true" type="checkbox" id="excluido" [(ngModel)]="prospect.excluido"/>
+    </div>
+    <div>
+        <label for="cliente">Cliente: </label>
+        <input disabled="true" type="checkbox" id="cliente" [(ngModel)]="prospect.cliente"/>
+    </div>
+    <div>
+        <label for="dataConversao">Data conversão: </label>
+        <input disabled="true" type="text" id="dataConversao" [ngModel]="prospect.dataConversao | date:'dd/MM/yyyy'"/>
+    </div>
+    <button type="button" (click)="novoProspect()">Salvar</button>
+    <button type="button" (click)="novoCliente()">Tornar cliente</button>
+</div>
