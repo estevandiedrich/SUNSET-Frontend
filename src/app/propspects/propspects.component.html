@@ -3,7 +3,7 @@
     <li *ngFor="let prospect of prospects | search:'nome,numeroDocumento':query">
         <a routerLink="/editprospect/{{prospect.id}}">
             <span class="badge">Id: {{prospect.id}}</span>
-            <span class="name">Name: {{prospect.nome}}<br/>Numero Documento: {{prospect.numeroDocumento}}</span>
+            <span class="name">Name: {{prospect.nome}} Numero Documento: {{prospect.numeroDocumento}}</span>
         </a>
         <button type="button" class="delete" title="delete prospect"
             (click)="delete(prospect)">X</button>
